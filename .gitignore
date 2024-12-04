@@ -1,0 +1,12 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables (pour ne pas envoyer le fichier .env contenant des informations sensibles)
+.env
+
+# Logs (si vous avez des fichiers de logs, vous pouvez les ignorer)
+*.log
+
+# Système d'exploitation - fichiers spécifiques à l'OS
+.DS_Store
+Thumbs.db
