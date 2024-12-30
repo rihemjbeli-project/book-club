@@ -1,0 +1,63 @@
+/* Navbar Container */
+.navbar {
+  background: #ffffff; /* Set background to white */
+  color: #000; /* Default text color (not used for links) */
+  padding: 20px 20px; /* Increase padding to make it thicker */
+  position: fixed; /* Fixed to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Stay on top of all content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+  border-bottom: 2px solid #f0f0f0; /* Add subtle border for separation */
+}
+
+/* Adjust Body Padding to Avoid Overlap */
+body {
+  margin: 0;
+  padding-top: 80px; /* Adjust for thicker navbar */
+}
+
+/* Navigation List */
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Links */
+.navbar-nav li {
+  margin: 0 20px;
+}
+
+.navbar-nav li a {
+  text-decoration: none;
+  color: #004d6b; /* Dark blue text for links */
+  font-size: 1.3rem; /* Slightly larger font */
+  font-weight: bold; /* Bold text */
+  transition: all 0.3s ease;
+}
+
+.navbar-nav li a:hover {
+  color: #4481eb; /* Lighter blue highlight on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+
+  .navbar-nav li a {
+    font-size: 1.1rem;
+  }
+}
