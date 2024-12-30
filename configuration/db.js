@@ -1,15 +1,16 @@
 const mongoose = require('mongoose');
 
-// Charger la configuration depuis .env
-const url = process.env.MONGO_URI;
+// URL directement dans le code (TEMPORAIRE)
+const url = "mongodb+srv://rihemjebali:SsURsjjKT8NXQgbs@book.jnoq1.mongodb.net/?retryWrites=true&w=majority&appName=book";
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(url); // Aucune option supplémentaire nécessaire
-        console.log("Connexion à la base de données réussie");
+        // Connexion sans options dépréciées
+        await mongoose.connect(url);
+        console.log("✅ Connexion à la base de données réussie");
     } catch (error) {
-        console.error("Erreur de connexion à MongoDB:", error.message);
-        process.exit(1); // Arrêt de l'application si la connexion échoue
+        console.error("❌ Erreur de connexion à MongoDB:", error.message);
+        process.exit(1);
     }
 };
 
